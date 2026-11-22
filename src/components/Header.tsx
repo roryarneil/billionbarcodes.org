@@ -1,28 +1,40 @@
-import { BarcodeMark } from '../icons'
 import { links } from '../links'
+import { Brand } from './Brand'
 
-export function Header() {
+export type NavItem = { href: string; label: string }
+
+type HeaderProps = {
+  homeHref?: string
+  items?: NavItem[]
+  cta?: NavItem
+  ctaClass?: string
+}
+
+const landingItems: NavItem[] = [
+  { href: '#how', label: 'How it works' },
+  { href: links.naughtyList, label: 'The Naughty List' },
+  { href: links.greenAlternatives, label: 'Green Alternatives' },
+  { href: '#producers', label: 'For producers' },
+]
+
+export function Header({
+  homeHref = '#top',
+  items = landingItems,
+  cta = { href: '#join', label: 'Join the waitlist' },
+  ctaClass = 'btn btn-mint',
+}: HeaderProps) {
   return (
     <header className="header-bar">
       <nav className="nav" aria-label="Main">
-        <a href="#top" className="brand" aria-label="Billion Barcodes by Climate Savers – home">
-          <BarcodeMark />
-          <span className="brand-text">
-            <span className="brand-name">Billion Barcodes</span>
-            <img
-              className="brand-mark"
-              src="/climatesavers-wordmark.png"
-              alt=""
-            />
-          </span>
-        </a>
+        <Brand href={homeHref} />
         <div className="nav-links">
-          <a href="#how">How it works</a>
-          <a href={links.naughtyList}>The Naughty List</a>
-          <a href={links.greenAlternatives}>Green Alternatives</a>
-          <a href="#producers">For producers</a>
-          <a className="btn btn-mint" href="#join">
-            Join the waitlist
+          {items.map((item) => (
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
+          ))}
+          <a className={ctaClass} href={cta.href}>
+            {cta.label}
           </a>
         </div>
       </nav>

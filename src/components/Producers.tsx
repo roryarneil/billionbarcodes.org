@@ -1,3 +1,5 @@
+import { links } from '../links'
+
 const cards = [
   {
     title: 'Already have an LCA?',
@@ -42,9 +44,20 @@ export function Producers() {
           ))}
         </div>
         <div className="gs1-row">
-          <div className="gs1-built">
-            <span>Built on the</span>
-            <span className="gs1-chip">GS1 CO2 attribute</span>
+          <div className="gs1-about">
+            <p className="gs1-lead">
+              Built on <a href={links.gs1Standards}>GS1</a>, the global standard for
+              retail and e-commerce. A non-profit that standardises the distribution
+              of barcodes globally.
+            </p>
+            <p className="muted">
+              GS1 Standards create a common foundation for business by uniquely
+              identifying, accurately capturing and automatically sharing vital
+              information about products, locations, assets and more.
+            </p>
+            <a className="text-link text-link-leaf" href={links.gs1Standards}>
+              Learn about GS1 Standards →
+            </a>
           </div>
           <div className="badge-row">
             <div className="gs1-badge">

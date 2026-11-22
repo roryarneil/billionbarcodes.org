@@ -118,6 +118,15 @@
   font-size: 20px;
 }
 
+.brand-by {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--muted);
+}
+
 .brand-mark {
   height: 15px;
   width: auto;
@@ -949,7 +958,7 @@
   font-weight: 700;
 }
 
-.footer-brand span {
+.footer-brand > span {
   font-size: 15px;
   line-height: 1.6;
   color: var(--muted);
@@ -989,4 +998,61 @@
   .nav {
     padding: 16px 20px;
   }
+}
+
+/* Display typeface for headings and big numbers */
+.display,
+.hero-title,
+.brand-name,
+.waitlist-title,
+.outcome-card h3,
+.problem-num,
+.footprint-value {
+  font-family: var(--display);
+}
+
+.text-link-leaf {
+  color: var(--leaf);
+  font-size: 15px;
+}
+
+.gs1-about {
+  flex: 1 1 320px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gs1-about .muted {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.gs1-lead {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.footer-legal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px 48px;
+}
+
+.footer-legal p {
+  margin: 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 960px;
+}
+
+.footer-legal a {
+  color: var(--soft);
 }

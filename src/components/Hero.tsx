@@ -13,8 +13,8 @@ export function Hero() {
         </h1>
         <p className="hero-lede">
           Point your phone at any product in any store. Get its product carbon
-          footprint, total up your basket, and save it to your monthly CO2 in the
-          Climate Savers app.
+          footprint, total up your basket, and save it to your monthly lifestyle
+          emissions in the Climate Savers app.
         </p>
         <div className="hero-actions">
           <a className="btn btn-mint-lg" href="#join">
