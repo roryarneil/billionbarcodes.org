@@ -1,0 +1,35 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/((?!assets/|fonts/)[^.]*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "naughtylist.billionbarcodes.org"
+        }
+      ],
+      "destination": "/naughty-list/index.html"
+    },
+    {
+      "source": "/((?!assets/|fonts/)[^.]*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "disclosed-alternatives.billionbarcodes.org"
+        }
+      ],
+      "destination": "/disclosed-alternatives/index.html"
+    },
+    {
+      "source": "/((?!assets/|fonts/|originator/)[^.]*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "originator.billionbarcodes.org"
+        }
+      ],
+      "destination": "/originator/index.html"
+    }
+  ]
+}

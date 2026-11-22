@@ -1,3 +1,5 @@
+import { links } from '../links'
+
 const cards = [
   {
     title: 'Already have an LCA?',
@@ -6,13 +8,13 @@ const cards = [
   },
   {
     title: 'Not measured yet?',
-    body: 'Commission a life cycle assessment through one of our audit partners and display a certified leaf rating on your product.',
+    body: 'Commission a life cycle assessment through one of our audit partners, then publish the verified footprint for your product.',
     cta: 'Talk to an audit partner',
   },
   {
-    title: 'Green alternative brand?',
-    body: 'Get recommended when shoppers scan a product that won’t disclose, and get listed on the Climate Savers marketplace.',
-    cta: 'Become a green alternative',
+    title: 'Already disclosed?',
+    body: 'Get recommended as a disclosed alternative when shoppers scan a product that doesn’t disclose, and get listed on the Climate Savers marketplace.',
+    cta: 'List your product',
   },
 ]
 
@@ -42,9 +44,20 @@ export function Producers() {
           ))}
         </div>
         <div className="gs1-row">
-          <div className="gs1-built">
-            <span>Built on the</span>
-            <span className="gs1-chip">GS1 CO2 attribute</span>
+          <div className="gs1-about">
+            <p className="gs1-lead">
+              Built on <a href={links.gs1Standards}>GS1</a>, the global standard for
+              retail and e-commerce. A non-profit that standardises the distribution
+              of barcodes globally.
+            </p>
+            <p className="muted">
+              GS1 Standards create a common foundation for business by uniquely
+              identifying, accurately capturing and automatically sharing vital
+              information about products, locations, assets and more.
+            </p>
+            <a className="text-link text-link-leaf" href={links.gs1Standards}>
+              Learn about GS1 Standards →
+            </a>
           </div>
           <div className="badge-row">
             <div className="gs1-badge">

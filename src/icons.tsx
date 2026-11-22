@@ -130,3 +130,80 @@ export function LeafRating({
     </div>
   )
 }
+
+export function SearchIcon({ size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" />
+      <path d="M20 20l-3.5-3.5" />
+    </svg>
+  )
+}
+
+export function AlertIcon({ size = 18 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v6M12 16.5v.5" />
+    </svg>
+  )
+}
+
+export function CheckIcon({ size = 18 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8 12.5l2.7 2.7L16.5 9" />
+    </svg>
+  )
+}
+
+export type Level = 'newb' | 'rookie' | 'guardian' | 'legend'
+
+const INK = '#0b2420'
+
+// Originator status avatars: Newb (1+), Rookie (10+), Guardian (50+), Legend (250+)
+export function LevelAvatar({ level, size = 72 }: { level: Level; size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="38" r="17" fill="#fff" stroke={INK} strokeWidth="3" />
+      {level === 'newb' && (
+        <>
+          <path d="M32 21c-1-5 3-8 6-6.5c2.5 1.3 1.5 4.5-1 4" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" />
+          <circle cx="21.5" cy="45" r="2.8" fill="#ffb3b3" />
+          <circle cx="42.5" cy="45" r="2.8" fill="#ffb3b3" />
+          <circle cx="32" cy="47.5" r="2" fill="none" stroke={INK} strokeWidth="2" />
+        </>
+      )}
+      {level === 'rookie' && (
+        <path
+          d="M15 36C12 24 18 14 25 9c0 5 3 8 6 3c2 5 5 5 8-1c6 5 11 14 9 25c-5-7-11-9-16-9s-12 2-17 9z"
+          fill="#2ee6c0"
+          stroke={INK}
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+      )}
+      {level === 'guardian' && (
+        <>
+          <path d="M14 33C14 19 50 19 50 33z" fill="#1f6b5a" stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+          <rect x="10" y="31" width="44" height="6" rx="3" fill="#1f6b5a" stroke={INK} strokeWidth="2.5" />
+          <path d="M32 20l6 2.5v4.5c0 3.5-3 5.5-6 6.5c-3-1-6-3-6-6.5v-4.5z" fill="#58ffce" stroke={INK} strokeWidth="2" />
+        </>
+      )}
+      {level === 'legend' && (
+        <>
+          <path d="M17 28C8 25 6 14 9 7c2 9 7 13 13 15z" fill="#fff4d6" stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+          <path d="M47 28C56 25 58 14 55 7c-2 9-7 13-13 15z" fill="#fff4d6" stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+          <path d="M15 34C15 19 49 19 49 34z" fill="#8fa7a1" stroke={INK} strokeWidth="2.5" strokeLinejoin="round" />
+          <rect x="13" y="30" width="38" height="6" rx="2" fill="#5f7a75" stroke={INK} strokeWidth="2.5" />
+          {[20, 28, 36, 44].map((x) => (
+            <circle key={x} cx={x} cy="33" r="1.2" fill="#fff" />
+          ))}
+        </>
+      )}
+      <circle cx="26" cy="40" r="2.3" fill={INK} />
+      <circle cx="38" cy="40" r="2.3" fill={INK} />
+    </svg>
+  )
+}
