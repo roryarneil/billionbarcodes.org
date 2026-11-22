@@ -21,7 +21,7 @@ export function WhyItMatters() {
     <section className="wrap">
       <div className="section-intro">
         <p className="eyebrow">Why this matters</p>
-        <h2 className="display">You can’t manage a footprint you can’t see.</h2>
+        <h2 className="display">You can’t manage carbon emissions you can’t see.</h2>
       </div>
       <div className="problem-grid">
         {problems.map((item) => (
