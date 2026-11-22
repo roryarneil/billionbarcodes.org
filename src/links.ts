@@ -2,6 +2,7 @@ export const links = {
   home: 'https://billionbarcodes.org',
   naughtyList: 'https://naughtylist.billionbarcodes.org',
   disclosedAlternatives: 'https://disclosed-alternatives.billionbarcodes.org',
+  originator: 'https://originator.billionbarcodes.org',
   humanChain: 'https://humanchain.com',
   climateSaversApp: 'https://app.climatesavers.io',
   climateSaversRewards: 'https://app.climatesavers.io/user/rewards',

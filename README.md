@@ -1,19 +1,20 @@
 # billionbarcodes.org
 
-Vite + React + TypeScript, deployed on Vercel. One build serves three sites:
+Vite + React + TypeScript, deployed on Vercel. One build serves four sites:
 
 | Site | Source | Built to |
 | --- | --- | --- |
 | billionbarcodes.org | `index.html`, `src/App.tsx` | `dist/index.html` |
 | naughtylist.billionbarcodes.org | `naughty-list/index.html`, `src/pages/NaughtyListPage.tsx` | `dist/naughty-list/` |
 | disclosed-alternatives.billionbarcodes.org | `disclosed-alternatives/index.html`, `src/pages/DisclosedAlternativesPage.tsx` | `dist/disclosed-alternatives/` |
+| originator.billionbarcodes.org | `originator/index.html`, `src/pages/OriginatorPage.tsx` | `dist/originator/` |
 
-`vercel.json` routes each subdomain to its page by host name. Add both subdomains to
+`vercel.json` routes each subdomain to its page by host name. Add all three subdomains to
 this Vercel project (Settings → Domains) and point their DNS at Vercel.
 
 ```bash
 npm install
-npm run dev     # http://localhost:5173, /naughty-list/ and /disclosed-alternatives/
+npm run dev     # http://localhost:5173, /naughty-list/, /disclosed-alternatives/ and /originator/
 npm run build   # typecheck + production build
 ```
 

@@ -1,9 +1,15 @@
 export type RegionNote = { region: string; note: string }
 
-export function RegionNotes({ notes }: { notes: RegionNote[] }) {
+export function RegionNotes({
+  notes,
+  title = 'Where we operate',
+}: {
+  notes: RegionNote[]
+  title?: string | null
+}) {
   return (
     <>
-      <h3 className="region-title">Where we operate</h3>
+      {title && <h3 className="region-title">{title}</h3>}
       <div className="region-grid">
         {notes.map((n) => (
           <article className="region-card" key={n.region}>
