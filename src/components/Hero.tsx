@@ -1,4 +1,4 @@
-import { LeafRating, ProductBarcode } from '../icons'
+import { ProductBarcode } from '../icons'
 import { links } from '../links'
 
 export function Hero() {
@@ -63,7 +63,7 @@ export function Hero() {
                     0.38 <span>kg CO2e</span>
                   </div>
                 </div>
-                <LeafRating label="LCA rating 4 of 5 leaves" />
+                <span className="pill pill-mint">Actual · GS1</span>
               </div>
               <div className="add-basket">Add to basket · +0.38 kg</div>
             </div>

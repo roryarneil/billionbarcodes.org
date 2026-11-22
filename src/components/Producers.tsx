@@ -8,13 +8,13 @@ const cards = [
   },
   {
     title: 'Not measured yet?',
-    body: 'Commission a life cycle assessment through one of our audit partners and display a certified leaf rating on your product.',
+    body: 'Commission a life cycle assessment through one of our audit partners, then publish the verified footprint for your product.',
     cta: 'Talk to an audit partner',
   },
   {
-    title: 'Green alternative brand?',
-    body: 'Get recommended when shoppers scan a product that won’t disclose, and get listed on the Climate Savers marketplace.',
-    cta: 'Become a green alternative',
+    title: 'Already disclosed?',
+    body: 'Get recommended as a disclosed alternative when shoppers scan a product that doesn’t disclose, and get listed on the Climate Savers marketplace.',
+    cta: 'List your product',
   },
 ]
 

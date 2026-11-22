@@ -13,7 +13,7 @@ type HeaderProps = {
 const landingItems: NavItem[] = [
   { href: '#how', label: 'How it works' },
   { href: links.naughtyList, label: 'The Naughty List' },
-  { href: links.greenAlternatives, label: 'Green Alternatives' },
+  { href: links.disclosedAlternatives, label: 'Disclosed Alternatives' },
   { href: '#producers', label: 'For producers' },
 ]
 

@@ -16,7 +16,7 @@ export function Footer({ homeHref = '#top' }: FooterProps) {
         <div className="footer-links">
           <a href={links.climateSaversApp}>app.climatesavers.io</a>
           <a href={links.naughtyList}>The Naughty List</a>
-          <a href={links.greenAlternatives}>Green Alternatives</a>
+          <a href={links.disclosedAlternatives}>Disclosed Alternatives</a>
           <a href={homeHref === '#top' ? '#producers' : links.home + '/#producers'}>For producers</a>
         </div>
       </div>

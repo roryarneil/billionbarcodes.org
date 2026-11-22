@@ -1056,3 +1056,18 @@
 .footer-legal a {
   color: var(--soft);
 }
+
+.kg-example {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--soft);
+}
+
+.kg-example span {
+  font-family: var(--display);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--mint);
+}
